@@ -1,0 +1,186 @@
+/*==================== LARGE DEVICES ====================*/
+
+@media screen and (max-width: 992px){
+
+    .hero__container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero__description{
+        margin-inline: auto;
+    }
+
+    .hero__buttons,
+    .hero__stats{
+        justify-content: center;
+    }
+
+    .projects__container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .process__container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about__cards{
+        grid-template-columns: 1fr;
+    }
+
+    .case-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/*==================== MOBILE ====================*/
+
+@media screen and (max-width:768px){
+
+    .nav{
+
+        height:70px;
+
+        padding-inline:1.2rem;
+
+    }
+
+    .nav__menu{
+
+        display:none;
+
+    }
+
+    .nav__button{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        padding-top:140px;
+
+    }
+
+    .hero__title{
+
+        font-size:2.8rem;
+
+        letter-spacing:-1px;
+
+    }
+
+    .hero__description{
+
+        font-size:1rem;
+
+    }
+
+    .hero__buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .hero__buttons .button{
+
+        width:220px;
+
+        text-align:center;
+
+    }
+
+    .hero__stats{
+
+        flex-direction:column;
+
+        gap:2rem;
+
+    }
+
+    .projects__container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .process__container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact__box{
+
+        padding:3rem 1.5rem;
+
+    }
+
+    .contact__buttons{
+
+        flex-direction:column;
+
+    }
+
+    .contact__buttons .button{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .section__title{
+
+        font-size:2rem;
+
+    }
+
+    .case-hero h1{
+
+        font-size:2.3rem;
+
+    }
+
+}
+
+/*==================== SMALL MOBILE ====================*/
+
+@media screen and (max-width:480px){
+
+    .hero__title{
+
+        font-size:2.2rem;
+
+    }
+
+    .section{
+
+        padding:5rem 0;
+
+    }
+
+    .preview__card{
+
+        padding:1.5rem;
+
+    }
+
+    .copy-card{
+
+        padding:1.5rem;
+
+    }
+
+    .project__card{
+
+        padding:1.5rem;
+
+    }
+
+}

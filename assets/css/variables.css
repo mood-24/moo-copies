@@ -1,0 +1,27 @@
+:root{
+
+    --body-color:#F7F9FC;
+
+    --container-color:#FFFFFF;
+
+    --card-color:#FFFFFF;
+
+    --title-color:#0F172A;
+
+    --text-color:#475569;
+
+    --accent-color:#2563EB;
+
+    --accent-hover:#1D4ED8;
+
+    --border-color:#E2E8F0;
+
+    --shadow:0 10px 40px rgba(15,23,42,.08);
+
+    --body-font:"Plus Jakarta Sans",sans-serif;
+
+    --transition:.35s ease;
+
+    --radius:22px;
+
+}
