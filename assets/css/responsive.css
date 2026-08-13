@@ -1,186 +1,358 @@
-/*==================== LARGE DEVICES ====================*/
+/* =========================================================
+   RESPONSIVE DESIGN
+   Moo Copies
+   ========================================================= */
 
-@media screen and (max-width: 992px){
 
-    .hero__container{
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 3rem;
+/* ==================== TABLET ==================== */
+
+@media screen and (max-width: 992px) {
+
+    .container {
+        width: min(90%, 960px);
     }
 
-    .hero__description{
+    .hero__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .hero__description {
         margin-inline: auto;
+        max-width: 650px;
     }
 
     .hero__buttons,
-    .hero__stats{
+    .hero__stats {
         justify-content: center;
     }
 
-    .projects__container{
-        grid-template-columns: repeat(2,1fr);
+    .projects__container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .process__container{
-        grid-template-columns: repeat(2,1fr);
+    .process__container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .about__cards{
+    .about__cards {
         grid-template-columns: 1fr;
     }
 
-    .case-grid{
+    .case-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Prevent wide content from breaking the viewport */
+
+    img,
+    video,
+    iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .copy-card,
+    .preview__card,
+    .project__card,
+    .contact__box {
+        max-width: 100%;
+    }
+}
+
+
+/* ==================== MOBILE ==================== */
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: min(90%, 600px);
+        margin-inline: auto;
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .nav {
+        height: 68px;
+        padding-inline: 1rem;
+    }
+
+    .nav__menu {
+        display: none;
+    }
+
+    .nav__button {
+        display: none;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        padding-top: 110px;
+        padding-bottom: 4rem;
+    }
+
+    .hero__container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero__title {
+        font-size: clamp(2.2rem, 9vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -1px;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .hero__description {
+        width: 100%;
+        max-width: 550px;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero__buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: .8rem;
+    }
+
+    .hero__buttons .button {
+        width: min(100%, 260px);
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero__stats {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+
+    /* ---------- SECTIONS ---------- */
+
+    .section {
+        padding: 4.5rem 0;
+    }
+
+    .section__title {
+        font-size: clamp(1.8rem, 7vw, 2.3rem);
+        line-height: 1.2;
+        overflow-wrap: break-word;
+    }
+
+    .section__subtitle {
+        max-width: 100%;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about__cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+
+    /* ---------- PROJECTS ---------- */
+
+    .projects__container {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .project__card {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem;
+        min-width: 0;
+    }
+
+    .project__card * {
+        max-width: 100%;
+    }
+
+
+    /* ---------- PROCESS ---------- */
+
+    .process__container {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact__box {
+        width: 100%;
+        max-width: 100%;
+        padding: 2.5rem 1.25rem;
+    }
+
+    .contact__buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: .8rem;
+    }
+
+    .contact__buttons .button {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /* ---------- CASE STUDIES ---------- */
+
+    .case-hero {
+        padding-top: 110px;
+        padding-bottom: 3rem;
+    }
+
+    .case-hero h1 {
+        font-size: clamp(2rem, 8vw, 2.6rem);
+        line-height: 1.15;
+        overflow-wrap: break-word;
+    }
+
+    .case-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .copy-card,
+    .preview__card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 1.5rem;
+    }
+
+    .copy-card p,
+    .preview__card p {
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+
+    /* ---------- GENERAL TEXT ---------- */
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    span {
+        max-width: 100%;
+    }
+
+    p {
+        overflow-wrap: break-word;
     }
 
 }
 
-/*==================== MOBILE ====================*/
 
-@media screen and (max-width:768px){
+/* ==================== SMALL MOBILE ==================== */
 
-    .nav{
+@media screen and (max-width: 480px) {
 
-        height:70px;
-
-        padding-inline:1.2rem;
-
+    .container {
+        width: calc(100% - 32px);
     }
 
-    .nav__menu{
-
-        display:none;
-
+    .section {
+        padding: 4rem 0;
     }
 
-    .nav__button{
 
-        display:none;
+    /* ---------- HERO ---------- */
 
+    .hero {
+        padding-top: 100px;
     }
 
-    .hero{
-
-        padding-top:140px;
-
+    .hero__title {
+        font-size: 2.15rem;
+        line-height: 1.1;
     }
 
-    .hero__title{
-
-        font-size:2.8rem;
-
-        letter-spacing:-1px;
-
+    .hero__description {
+        font-size: .95rem;
+        line-height: 1.65;
     }
 
-    .hero__description{
 
-        font-size:1rem;
+    /* ---------- SECTION TITLE ---------- */
 
+    .section__title {
+        font-size: 1.9rem;
     }
 
-    .hero__buttons{
 
-        flex-direction:column;
+    /* ---------- CARDS ---------- */
 
-        align-items:center;
-
+    .preview__card,
+    .copy-card,
+    .project__card {
+        padding: 1.25rem;
     }
 
-    .hero__buttons .button{
 
-        width:220px;
+    /* ---------- CASE STUDY ---------- */
 
-        text-align:center;
-
+    .case-hero {
+        padding-top: 95px;
     }
 
-    .hero__stats{
-
-        flex-direction:column;
-
-        gap:2rem;
-
+    .case-hero h1 {
+        font-size: 2rem;
     }
 
-    .projects__container{
 
-        grid-template-columns:1fr;
+    /* ---------- CONTACT ---------- */
 
-    }
-
-    .process__container{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .contact__box{
-
-        padding:3rem 1.5rem;
-
-    }
-
-    .contact__buttons{
-
-        flex-direction:column;
-
-    }
-
-    .contact__buttons .button{
-
-        width:100%;
-
-        justify-content:center;
-
-    }
-
-    .section__title{
-
-        font-size:2rem;
-
-    }
-
-    .case-hero h1{
-
-        font-size:2.3rem;
-
+    .contact__box {
+        padding: 2rem 1rem;
     }
 
 }
 
-/*==================== SMALL MOBILE ====================*/
 
-@media screen and (max-width:480px){
+/* ==================== VERY SMALL PHONES ==================== */
 
-    .hero__title{
+@media screen and (max-width: 360px) {
 
-        font-size:2.2rem;
-
+    .container {
+        width: calc(100% - 24px);
     }
 
-    .section{
-
-        padding:5rem 0;
-
+    .hero__title {
+        font-size: 1.9rem;
     }
 
-    .preview__card{
-
-        padding:1.5rem;
-
+    .section__title {
+        font-size: 1.7rem;
     }
 
-    .copy-card{
-
-        padding:1.5rem;
-
-    }
-
-    .project__card{
-
-        padding:1.5rem;
-
+    .project__card,
+    .copy-card,
+    .preview__card {
+        padding: 1rem;
     }
 
 }
